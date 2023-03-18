@@ -5,6 +5,7 @@
     img{
         width: 64px;
         height: 64px;
+        margin-top: 4rem;
     }
 }
 
@@ -12,7 +13,7 @@
     img{
         width: 100px;
         height: 100px;
-       margin-top: 4rem;
+        margin-top: 2rem;
     }
 }
 
@@ -20,7 +21,6 @@
     img{
         width: 115px;
         height: 115px;
-       margin-top: 2rem;
     }
 }
 
