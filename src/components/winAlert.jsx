@@ -1,11 +1,12 @@
 import Swal from "sweetalert2";
 import "animate.css"
 
-export default function WinAlert (turns, cards) {
+export default function WinAlert (turns, cards, showWinAlert) {
     if (
      cards.every(card => card.matched) && 
      cards.some(card => card.matched) &&
-     turns>=0
+     turns>=0 &&
+     showWinAlert
       ){
      setTimeout(() => {
         Swal.fire({
