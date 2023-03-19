@@ -1,7 +1,7 @@
 import Swal from "sweetalert2";
 import "animate.css"
 
-export default function LoseAlert (turns, setCards, cards) {
+export default function LoseAlert (turns, setCards, cards, setShowWinAlert) {
 
    const win = cards.every(card => card.matched) && cards.some(card => card.matched)
 
@@ -37,6 +37,7 @@ export default function LoseAlert (turns, setCards, cards) {
         }).then((result) => {
          if(result.isConfirmed){
             setTimeout(() => {
+          setShowWinAlert(false)    
           setCards(
            cards.map(card=> {
             return {...card, matched: true}
