@@ -12,6 +12,7 @@ function HardLevel() {
    const[choiceTwo, setChoiceTwo] = useState(null)
    const[turns, setTurns] = useState(17)
    const[disabled, setDisabled] = useState(false)
+   const[showWinAlert, setShowWinAlert] = useState(true)
  
   function shufflecards () {
      const shufflecards = [...hardCardImages, ...hardCardImages]
@@ -31,8 +32,8 @@ function HardLevel() {
  
   UseMatchCards(choiceOne, choiceTwo, setDisabled, setCards, resetTurns, shufflecards)
  
-  LoseAlert(turns, setCards, cards)
-  WinAlert(turns, cards)
+  LoseAlert(turns, setCards, cards, setShowWinAlert)
+  WinAlert(turns, cards, showWinAlert)
  
   function resetTurns () {
      setChoiceOne(null)
