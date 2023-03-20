@@ -3,9 +3,9 @@ import "animate.css"
 
 export default function LoseAlert (turns, setCards, cards, setShowWinAlert) {
 
-   const win = cards.every(card => card.matched) && cards.some(card => card.matched)
+   const notEnoughTurn = (cards.filter(card => !card.matched)).length/2
 
-    if(turns <= 0 && !win) {
+    if(turns < notEnoughTurn) {
       setTimeout(() => {
         Swal.fire({
          title: "You Lose",
