@@ -9,7 +9,7 @@ export default function LoseAlert (turns, setCards, cards, setShowWinAlert) {
       setTimeout(() => {
         Swal.fire({
          title: "You Lose",
-         text: "Number of turns is over",
+         text: "There are not enough turns left.",
          icon: "error",
          width: 300,
          position: "top",
