@@ -9,7 +9,7 @@ export default function WinAlert (turns, cards, showWinAlert) {
      setTimeout(() => {
         Swal.fire({
             title: "You Win",
-            text: "The cards are matched",
+            text: "Cards are matched",
             icon: "success",
             width: 300,
             position: "top",
